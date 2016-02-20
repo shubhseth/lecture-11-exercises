@@ -23,13 +23,13 @@ g <- list(
 )
 
 plot_ly(df, 
-        lon = lon, 
-        lat = lat, 
-        text = hover, # how does this work?
-        marker = list(size = sqrt(pop/10000) + 1), # what else can you adjust?
-        color = q, # what does this do?
-        type = 'scattergeo', 
-        locationmode = 'USA-states'
-        ) %>%
+  lon = lon, 
+  lat = lat, 
+  text = hover, # how does this work?
+  marker = list(size = sqrt(pop/10000) + 1), # what else can you adjust?
+  color = q, # what does this do?
+  type = 'scattergeo', 
+  locationmode = 'USA-states'
+) %>%
   # what if you don't pass this into the layout function?
-layout(title = '2014 US city populations<br>(Click legend to toggle)', geo = g)
+  layout(title = '2014 US city populations<br>(Click legend to toggle)', geo = g)
